@@ -5,8 +5,8 @@ import streamlit as st
 from babel.numbers import format_currency
 
 # Membaca dataset
-day_df = pd.read_csv("dashboard/day_data.csv")
-hour_df = pd.read_csv("dashboard/hour_data.csv")
+day_df = pd.read_csv("./dashboard/day_data.csv")
+hour_df = pd.read_csv("./dashboard/hour_data.csv")
 
 def create_daily_sharing_df(df):
     daily_sharing_df = df.resample(rule="D", on="date").agg({
